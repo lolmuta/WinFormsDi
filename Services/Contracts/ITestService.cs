@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WinFormsTestTaskCancel.Services.Contracts
@@ -10,5 +11,7 @@ namespace WinFormsTestTaskCancel.Services.Contracts
     {
         string GetHelloWorld(string ipt);
         string GetIp();
+
+        Task<CancellationTokenSource> DoZoomIn();
     }
 }
